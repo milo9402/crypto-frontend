@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "crypto-frontend": {
+      "i18n":{
+        "sourceLocale":"en-US",
+        "locales": {
+          "es-PR":"src/locale/messages.es.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,6 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize":["es-PR"],
             "outputPath": "dist/crypto-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -103,5 +110,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "435075be-7780-4ccf-b16b-c171a2fb9f33"
   }
 }
